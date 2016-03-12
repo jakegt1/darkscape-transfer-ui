@@ -3,7 +3,7 @@ import math
 
 class Runescaper:
 
-    def __init__(self, name, RS3=True):
+    def __init__(self, name):
         self.name = name
         self.skills = [ Skill(x, 1, 0) for x in skill_list ]
         self.xp_table = [0]
@@ -30,13 +30,13 @@ class Runescaper:
                 self.change_skill_exp(skill_list[val], stats[2])
         return rs3player
 
-    def get_level(self, level):
+    def get_level_exp(self, level):
         return self.xp_table[level-1]
 
     def add_skill_dict(self, dictionary, level_mode=True):
         if(level_mode): 
             for skill, level in dictionary.items():
-                self.change_skill_exp(skill, (self.xp_table[level-1])/2, True)
+                self.change_skill_exp(skill, (self.get_level_exp(level)/2), True)
         else:
             for skill, exp in dictionary.items():
                 self.change_skill_exp(skill, exp/2, True)
@@ -96,7 +96,7 @@ skill_list = [
     "attack",
     "defence",
     "strength",
-    "constiution",
+    "constitution",
     "ranged",
     "prayer",
     "magic",

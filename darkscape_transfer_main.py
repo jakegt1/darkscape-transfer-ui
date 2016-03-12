@@ -72,7 +72,6 @@ class DarkscapeUI(QMainWindow):
         for skill, ui_level in self.skill_ui.items():
             skill_level = ui_level.text() if ui_level.text() else "1"
             skills_dict[skill] = int(skill_level)
-        print(skills_dict)
         runescaper.add_skill_dict(skills_dict)
         QMessageBox.about(
             self,
