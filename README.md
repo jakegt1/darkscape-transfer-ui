@@ -6,4 +6,8 @@ Calculates experience for people transferring from darkscape to RS3.
 * **PyQt5**
 * Windows binary created by **pyinstaller**
 
+## Created for
+* The great community from [/r/rsdarkscape](http://reddit.com/r/rsdarkscape)
+
+
 
