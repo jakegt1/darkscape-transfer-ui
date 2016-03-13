@@ -14,6 +14,7 @@ Download from releases page, extract and run the *DarkscapeTransfer* Shortcut.
 Preqrequisites:
 * PyQt5
 * Python3.4
+* Requests
 
 Run using *python3 darkscape_transfer_main.py*.
 
