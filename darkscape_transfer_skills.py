@@ -42,13 +42,13 @@ class Runescaper:
                 self.change_skill_exp(skill, exp/2, True)
 
     def __str__(self):
-        long_string =      "===========Stats for "+self.name+"===========\n\n"
+        long_string =      "===========Stats for "+self.name+"===========\n"
         if(self.RS3):
             long_string += "You have an RS3 account. Your exp was added.\n\n"
         else:
-            long_string += "You don't have an RS3 account. \n\n"
+            long_string += "You don't have an RS3 account. \n"
         for skill in self.skills:
-            long_string += skill.name.title()+": "+str(skill.exp)+" Experience (Level "+str(skill.level)+")\n\n"
+            long_string += skill.name.title()+": "+str(skill.exp)+" Experience (Level "+str(skill.level)+")\n"
         long_string += "Your total level will be "+str(self.total_level())+"."
         return long_string
         
